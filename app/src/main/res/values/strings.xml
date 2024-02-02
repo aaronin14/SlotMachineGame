@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Slot Machine Game</string>
+    <string name="game_instruction">Win by getting three identical numbers in a row.</string>
+    <string name="default_value">0</string>
+</resources>

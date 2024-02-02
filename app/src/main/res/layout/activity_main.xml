@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/app_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <TextView
+        android:id="@+id/instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/game_instruction"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tittle" />
+
+    <TextView
+        android:id="@+id/first_number"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:background="#FF5722"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/default_value"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/second_number"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instruction" />
+
+    <TextView
+        android:id="@+id/second_number"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:background="#FF5722"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/default_value"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/first_number"
+        app:layout_constraintEnd_toStartOf="@+id/third_number"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/first_number" />
+
+    <TextView
+        android:id="@+id/third_number"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="10dp"
+        android:background="#FF5722"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/default_value"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/second_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/second_number" />
+
+    <TextView
+        android:id="@+id/balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Balance"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="@+id/bet_amount"
+        app:layout_constraintEnd_toStartOf="@+id/bet_amount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/bet_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="Bet Amount"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/balance"
+        tools:layout_editor_absoluteY="285dp" />
+
+    <TextView
+        android:id="@+id/balance_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="@+id/minus"
+        app:layout_constraintEnd_toEndOf="@+id/balance"
+        app:layout_constraintStart_toStartOf="@+id/balance" />
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/bet_amount_num"
+        app:layout_constraintStart_toStartOf="@+id/bet_amount" />
+
+    <TextView
+        android:id="@+id/bet_amount_num"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="$0"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="@+id/plus"
+        app:layout_constraintEnd_toStartOf="@+id/plus"
+        app:layout_constraintStart_toEndOf="@+id/minus" />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:text="\+"
+        app:layout_constraintEnd_toEndOf="@+id/bet_amount"
+        tools:layout_editor_absoluteY="346dp" />
+
+    <Button
+        android:id="@+id/play_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:text="Play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plus" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/play_button" />
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Reset Game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/message" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
